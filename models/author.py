@@ -52,5 +52,4 @@ class Author:
         connection.close()
         return magazines
 
-    # def __repr__(self):
-    #     return f'<Author {self.name}>'
+    

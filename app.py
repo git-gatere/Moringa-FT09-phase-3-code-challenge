@@ -5,10 +5,10 @@ from models.author import Author
 from models.magazine import Magazine
 
 def main():
-    # Initialize the database and create tables
+    
     create_tables()
 
-    # Collect user input
+    
     author_name = input("Enter author's name: ")
     magazine_name = input("Enter magazine name: ")
     magazine_category = input("Enter magazine category: ")
@@ -25,11 +25,11 @@ def main():
         you can modify it to meet the requirements of your implmentation.
     '''
 
-    # Create an author
+    
     cursor.execute('INSERT INTO authors (name) VALUES (?)', (author_name,))
     author_id = cursor.lastrowid # Use this to fetch the id of the newly created author
 
-    # Create a magazine
+
     cursor.execute('INSERT INTO magazines (name, category) VALUES (?,?)', (magazine_name, magazine_category))
     magazine_id = cursor.lastrowid # Use this to fetch the id of the newly created magazine
 
